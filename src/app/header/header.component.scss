@@ -1,0 +1,49 @@
+h1 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+p {
+  color: #fff;
+}
+nav li a{
+    font-style: normal ;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 22px;
+    /* identical to box height */
+    
+    
+    /* Text */
+    
+    color: #2A2A2A;
+}
+nav li.current a{
+    color: #2A2A2A !important;
+
+    background: none  !important ;
+}
+.form-control {
+  border-radius: 5px;
+  font-size: 1.4rem;
+}
+
+.nav-item{
+margin-right: 30px
+}
+a.active{
+  border-bottom: solid 2px red;
+}
+
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
+  width: 100%;
+}
+
+#header-wrapper {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  background-color: #fff
+}

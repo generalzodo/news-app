@@ -1,0 +1,31 @@
+<div class=" post  ">
+
+    <div class="image">
+        <!-- <div class="thumbnail" style="background-image: url('assets/images/img_h_4.jpg')"></div> -->
+        <img class="thumbnail " style="width: 100; height: auto" src="{{data?.urlToImage}}" alt="">
+    </div>
+
+    <span *ngIf="bookmarks.includes(data)"  class="bookmark">Bookmarked</span>
+
+
+    <div class="contents">
+        <span class="d-block cat" *ngFor="let cat of data?.categories"> <a href="javascript:void(0)">{{cat.title}}
+            </a></span>
+
+        <h2 class="px-3 mt-3"><a href="{{data.url}}"   >{{data?.title}}</a></h2>
+        <p class="mb-3 desc px-3 mt-2">{{data?.description}}</p>
+      
+       <div class="actions text-center ">
+        <div class="post-meta date-read d-flex justify-content-between px-3 mb-3 pb-3">
+            <span class="d-inline-block mr-3"><strong>{{ returnDate(data?.createdAt) }}</strong></span> <span class="d-inline-block">By {{data.author}} | 3
+               min read
+               </span>
+            
+       </div>
+        <img class="mx-3" src="assets/images/like.svg" alt=""> <small>20</small>  &nbsp;&nbsp;&nbsp;
+        <img class="mx-3 " (click)="bookmarkNews(data)" height="20"  [src]="checkBookmarks(data) ? 'assets/images/bookmark-remove.svg'  :'assets/images/bookmark-add.svg'" alt="">  &nbsp;&nbsp;&nbsp;
+        <img class="mx-3" src="assets/images/share.svg" alt=""><small>30</small>
+       </div>
+
+    </div>
+</div>
